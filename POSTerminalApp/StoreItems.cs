@@ -8,6 +8,7 @@ namespace POSTerminalApp
     {
         public static List<Product> StoreInventory = new List<Product>();
 
+
         public static void AddItem(Product aProduct)
         {
             StoreInventory.Add(aProduct);

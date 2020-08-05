@@ -18,7 +18,14 @@ namespace POSTerminalApp
             Description = aDescription;
             Price = aPrice;
         }
-
+        public Product(string aName)
+        {
+            Name = aName;
+        }
+        public Product(Decimal aPrice)
+        {
+            Price = aPrice;
+        }
 
 
         public override string ToString()

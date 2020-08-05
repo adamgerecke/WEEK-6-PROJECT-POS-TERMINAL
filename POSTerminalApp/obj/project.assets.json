@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\agerecke\\source\\repos\\Week6 Project POS Terminal\\POSTerminalApp\\POSTerminalApp.csproj",
+      "projectUniqueName": "C:\\devbuild4\\WEEK6\\Week6 Project POS Terminal\\POSTerminalApp\\POSTerminalApp.csproj",
       "projectName": "POSTerminalApp",
-      "projectPath": "C:\\Users\\agerecke\\source\\repos\\Week6 Project POS Terminal\\POSTerminalApp\\POSTerminalApp.csproj",
+      "projectPath": "C:\\devbuild4\\WEEK6\\Week6 Project POS Terminal\\POSTerminalApp\\POSTerminalApp.csproj",
       "packagesPath": "C:\\Users\\agerecke\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\agerecke\\source\\repos\\Week6 Project POS Terminal\\POSTerminalApp\\obj\\",
+      "outputPath": "C:\\devbuild4\\WEEK6\\Week6 Project POS Terminal\\POSTerminalApp\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\agerecke\\AppData\\Roaming\\NuGet\\NuGet.Config",

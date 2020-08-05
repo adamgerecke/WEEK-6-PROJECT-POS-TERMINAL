@@ -3526,11 +3526,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\agerecke\\source\\repos\\Week6 Project POS Terminal\\POSTerminalTests\\POSTerminalTests.csproj",
+      "projectUniqueName": "C:\\devbuild4\\WEEK6\\Week6 Project POS Terminal\\POSTerminalTests\\POSTerminalTests.csproj",
       "projectName": "POSTerminalTests",
-      "projectPath": "C:\\Users\\agerecke\\source\\repos\\Week6 Project POS Terminal\\POSTerminalTests\\POSTerminalTests.csproj",
+      "projectPath": "C:\\devbuild4\\WEEK6\\Week6 Project POS Terminal\\POSTerminalTests\\POSTerminalTests.csproj",
       "packagesPath": "C:\\Users\\agerecke\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\agerecke\\source\\repos\\Week6 Project POS Terminal\\POSTerminalTests\\obj\\",
+      "outputPath": "C:\\devbuild4\\WEEK6\\Week6 Project POS Terminal\\POSTerminalTests\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\agerecke\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -3546,8 +3546,8 @@
       "frameworks": {
         "netcoreapp3.1": {
           "projectReferences": {
-            "C:\\Users\\agerecke\\source\\repos\\Week6 Project POS Terminal\\POSTerminalApp\\POSTerminalApp.csproj": {
-              "projectPath": "C:\\Users\\agerecke\\source\\repos\\Week6 Project POS Terminal\\POSTerminalApp\\POSTerminalApp.csproj"
+            "C:\\devbuild4\\WEEK6\\Week6 Project POS Terminal\\POSTerminalApp\\POSTerminalApp.csproj": {
+              "projectPath": "C:\\devbuild4\\WEEK6\\Week6 Project POS Terminal\\POSTerminalApp\\POSTerminalApp.csproj"
             }
           }
         }
