@@ -34,5 +34,11 @@ namespace POSTerminalTests
             Assert.Equal(Math.Round(35.92m,2), ShoppingCart.ChangeBack(100.00m)); //User gives 100, gets 35.92 back since a Gold Ore Block costs 60.45 + Tax
         }
 
+        [Fact]
+        public void TestLineTotale()
+        {
+               Assert.Equal(Math.Round(60.45m, 2), ShoppingCart.LineTotal()); //checks if the line total is the price of the line, if 1 of the item is ordered as it was on line 32 of the test.
+        }
+
     }
 }
