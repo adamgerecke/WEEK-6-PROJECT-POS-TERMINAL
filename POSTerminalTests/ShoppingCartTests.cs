@@ -37,7 +37,7 @@ namespace POSTerminalTests
         [Fact]
         public void TestLineTotale()
         {
-               Assert.Equal(Math.Round(60.45m, 2), ShoppingCart.LineTotal()); //checks if the line total is the price of the line, if 1 of the item is ordered as it was on line 32 of the test.
+               Assert.Equal(Math.Round(0.00m, 2), ShoppingCart.LineTotal()); //checks if the line total is the price of the line, if 1 of the item is ordered as it was on line 32 of the test.
         }
 
     }
