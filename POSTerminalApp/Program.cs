@@ -38,6 +38,7 @@ namespace POSTerminalApp
             
             
             ShoppingCart.CheckOut();
+            Console.WriteLine(ShoppingCart.GetTotal());
             
 
             
