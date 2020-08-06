@@ -12,21 +12,7 @@ namespace POSTerminalApp
         public static void AddItem(Product aProduct)
         {
             StoreInventory.Add(aProduct);
-
-
         }
-
-        public static void ShowMenu()
-        {
-            for (int i = 0; i < StoreItems.StoreInventory.Count; i++)
-            {
-                Console.WriteLine($"{i + 1}. {StoreItems.StoreInventory[i]}");
-            }
-            Console.WriteLine($"{StoreItems.StoreInventory.Count + 1}. Cash Out.");
-            Console.WriteLine($"{StoreItems.StoreInventory.Count + 2}. Quit.");
-
-        }
-
-
+        
     }
 }

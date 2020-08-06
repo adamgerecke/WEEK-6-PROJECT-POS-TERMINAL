@@ -8,6 +8,30 @@ namespace POSTerminalApp
         {
             bool keepShopping = true;
 
+            static void ShowMenu()
+            {
+                for (int i = 0; i < StoreItems.StoreInventory.Count; i++)
+                {
+                    Console.WriteLine($"{i + 1}. {StoreItems.StoreInventory[i]}");
+                }
+                Console.WriteLine($"{StoreItems.StoreInventory.Count + 1}. Cash Out.");
+                Console.WriteLine($"{StoreItems.StoreInventory.Count + 2}. Quit.");
+            }
+
+            static void CheckOut()
+            {
+                Decimal grandTotal = Math.Round(ShoppingCart.GrandTotal(ShoppingCart.SubTotal()),2);
+                Decimal subTotal = Math.Round(ShoppingCart.SubTotal(), 2);
+                Decimal salesTax = Math.Round(ShoppingCart.SalesTax() * ShoppingCart.SubTotal(), 2);
+
+                Console.WriteLine("Thank you for shopping with us.");
+                Console.WriteLine($"Your Subtotal is: {subTotal}");
+                Console.WriteLine($"Sales Tax for the total purchase is: {salesTax}");
+                Console.WriteLine($"Your Grandtotal is: {grandTotal}");
+
+            }
+
+
             StoreItems.AddItem(new Product("Dirt Block", "Earth     ", "A simple common block, brown and course", 10.00m));
             StoreItems.AddItem(new Product("Stone Block", "Earth     ", "A simple common block, Gray and smooth", 12.50m));
             StoreItems.AddItem(new Product("Gravel Block", "Earth     ", "Even though this is made of many small rocks, it keeps its shape", 9.00m));
@@ -24,7 +48,7 @@ namespace POSTerminalApp
             Console.WriteLine("Welcome to MineCraft Blocks Co.\nWhere you can purchase your favorite MineCraft Block in Real Life!");
             Console.WriteLine();
 
-            StoreItems.ShowMenu();
+            ShowMenu();
             Console.WriteLine();
             Console.Write("What can we get for you today? (1-12):");
             int userInput = int.Parse(Console.ReadLine());
@@ -37,8 +61,8 @@ namespace POSTerminalApp
             }
             
             
-            ShoppingCart.CheckOut();
-            Console.WriteLine(ShoppingCart.GetTotal());
+            CheckOut();
+         
             
 
             

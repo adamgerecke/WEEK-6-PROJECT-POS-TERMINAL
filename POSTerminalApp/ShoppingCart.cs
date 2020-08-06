@@ -19,7 +19,15 @@ namespace POSTerminalApp
             ProductPrice.Add(StoreItems.StoreInventory[UserInput - 1].GetPrice);
         }
 
-        public static Decimal GetTotal()
+
+
+        public static Decimal SalesTax()
+        {
+            Decimal salesTax = 0.06m;
+            return salesTax;
+        }
+
+        public static Decimal SubTotal()
         {
             Decimal total = 0.00m;
 
@@ -38,13 +46,10 @@ namespace POSTerminalApp
             return total;
         }
 
-        public static void CheckOut()
+        public static Decimal GrandTotal(Decimal total)
         {
-            for (int i = 0; i < ShoppingCart.Cart.Count; i++)
-            {
-                Console.WriteLine($"{ShoppingCart.Cart[i]}");
-            }
-
+            Decimal grandTotal = (total * SalesTax()) + total;
+            return grandTotal;
         }
 
     }
