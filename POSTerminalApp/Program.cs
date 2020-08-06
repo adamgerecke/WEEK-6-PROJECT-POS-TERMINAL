@@ -47,21 +47,22 @@ namespace POSTerminalApp
 
             Console.WriteLine("Welcome to MineCraft Blocks Co.\nWhere you can purchase your favorite MineCraft Block in Real Life!");
             Console.WriteLine();
-
+            
             ShowMenu();
             Console.WriteLine();
             Console.Write("What can we get for you today? (1-12):");
             int userInput = int.Parse(Console.ReadLine());
             Console.Write("How many of that item would you like?:");
             int userAmount = int.Parse(Console.ReadLine());
-
+            ShoppingCart.ClearLineCost();
             for(int i = 0; i < userAmount; i++)
             {
-                ShoppingCart.AddToCart(userInput);
+                ShoppingCart.AddToCart(userInput); 
             }
-            
+            Console.WriteLine(ShoppingCart.LineTotal());
             
             CheckOut();
+            
          
             
 

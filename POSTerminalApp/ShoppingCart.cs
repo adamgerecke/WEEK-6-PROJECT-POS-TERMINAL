@@ -11,15 +11,29 @@ namespace POSTerminalApp
         
         public static List<String> ProductName = new List<string>();
         public static List<Decimal> ProductPrice = new List<Decimal>();
+        public static List<Decimal> LineCost = new List<decimal>();
 
+        public static void ClearLineCost()
+        {
+            LineCost.Clear();
+        }
         public static void AddToCart(int UserInput)
         {
             Cart.Add(StoreItems.StoreInventory[UserInput - 1]); //adds the product selected - 1 to match the users input.
             ProductName.Add(StoreItems.StoreInventory[UserInput - 1].GetName);
             ProductPrice.Add(StoreItems.StoreInventory[UserInput - 1].GetPrice);
+            LineCost.Add(StoreItems.StoreInventory[UserInput - 1].GetPrice);
         }
 
-
+        public static Decimal LineTotal()
+        {
+            Decimal lineCost = 0.00m;
+            for (int i=0; i<LineCost.Count; i++)
+            {
+                lineCost = lineCost + LineCost[i];
+            }
+            return lineCost;
+        }
 
         public static Decimal SalesTax()
         {
@@ -52,5 +66,11 @@ namespace POSTerminalApp
             return grandTotal;
         }
 
+        public static Decimal ChangeBack(Decimal UserPay)  //ADD SOME LOGIC TO MAKE SURE THEY GIVE YOU ENOUGH MONEY
+        {
+            Decimal grandTotal = Math.Round(GrandTotal(SubTotal()),2);
+            Decimal userChange = UserPay - grandTotal;
+            return userChange;
+        }
     }
 }

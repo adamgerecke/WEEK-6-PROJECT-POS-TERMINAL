@@ -9,21 +9,29 @@ namespace POSTerminalTests
     public class ShoppingCartTests
     {
         [Fact]
-        public void Test1()
+        public void TestSubTotal()
         {
             Assert.Equal(0.00m,ShoppingCart.SubTotal()); // verifies that the total starts at 0.00 dollars.
         }
 
         [Fact]
-        public void Test2()
+        public void TestSalesTax()
         {
             Assert.Equal(0.06m, ShoppingCart.SalesTax()); //verifies SalesTax is 6 Cents on the dollar.
         }
 
         [Fact]
-        public void Test3()
+        public void TestGrandTotal()
         {
             Assert.Equal(10.60m, ShoppingCart.GrandTotal(10.00m));
+        }
+
+        [Fact]
+        public void TestUserChange()
+        {
+            ShoppingCart.AddToCart(6); //Adds Gold Ore Block
+
+            Assert.Equal(Math.Round(35.92m,2), ShoppingCart.ChangeBack(100.00m)); //User gives 100, gets 35.92 back since a Gold Ore Block costs 60.45 + Tax
         }
 
     }
