@@ -53,7 +53,7 @@ namespace POSTerminalApp
 
         public override string ToString()
         {
-            return $"Product Name:{Name}\tCategory:{Category}\tDescription:{Description}\tPrice:{Price}";
+            return $"{"Product Name:"+Name,-30}{"Category:"+Category,-30}{"Price:" + Price,-30}{"Description:"+Description}";
         }
 
     }
