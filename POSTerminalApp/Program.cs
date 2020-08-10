@@ -77,6 +77,7 @@ namespace POSTerminalApp
             Console.WriteLine();
             while (keepShopping)
             {
+                Start:
                 ShoppingCart.ClearLineCost();
                 ShowMenu();
                 Console.WriteLine();
@@ -100,18 +101,16 @@ namespace POSTerminalApp
                 }
                 else if (userInput == 13)
                 {
-                    if (ShoppingCart.Cart.Count > 0)
+                    if (ShoppingCart.Cart.Count <= 0)
                     {
                         CheckOut();
                         PrintReceipt(0);
+                        goto Start;
                     }
-                    else
-                    {
-                        
-                    }
+
                 }
 
-                Console.Write("Would you like to order something else? (y/n):");
+                Console.Write("Would you like see the menu and order something else? (y/n):");
                 string keepGoing = Console.ReadLine().ToUpper();
                 if (keepGoing == "Y" || keepGoing == "YES")
                 {
@@ -125,7 +124,7 @@ namespace POSTerminalApp
                     bool isMoney = Decimal.TryParse(Console.ReadLine(), out userTender);
                     while (!isMoney && userInput < Math.Round(ShoppingCart.GrandTotal(ShoppingCart.SubTotal()), 2))
                     {
-                        Console.Write("That is not a valid input for amount owed to the store.");
+                        Console.Write("That is not a valid input for amount owed to the store. Please Enter valid amount:");
                         isMoney = Decimal.TryParse(Console.ReadLine(), out userTender);
                     }
                     if (userTender >= Math.Round(ShoppingCart.GrandTotal(ShoppingCart.SubTotal()), 2))
